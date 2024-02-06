@@ -1,0 +1,277 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.light-mode{
+    background-color: whitesmoke;
+}
+.light-mode .sidebar{
+    background-color: #161D30;
+}
+
+.dark-mode{
+    background-color: #161D30;
+}
+.dark-mode .sidebar{
+    background-color: #727793;
+}
+
+.dark-mode .sidebar button:hover{
+    background-color: #131e3b;
+}
+.dark-mode .main{
+    color: whitesmoke;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+
+.main-closed{
+    margin-left: 80px;
+    transition: margin 0.4s;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    transition: all 0.4s;
+    background-color: #161D30;
+    overflow: hidden;
+}
+
+.sidebar:hover{
+    width: 240px;
+}
+
+.sidebar-header{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.logo{
+    width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-left: 10px;
+}
+
+.logo:hover{
+    transform: scale(1.5);
+}
+
+.sidebar button > span{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16x 0 12px;
+    border-radius: 24px;
+    color: aliceblue;
+    line-height: 1;
+    margin-left: 5px;
+    transition: all 0.2s;
+}
+
+.sidebar button{
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 14px;
+    padding: 0;
+}
+
+.sidebar button:hover{
+    background: #727793;
+}
+
+.sidebar button i{
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button span{
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.sidebar > nav{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.conteudoPrincipal {
+    width: 100v;
+    height: 100vh;
+    display: block;
+    margin-left: 100px;
+}
+
+h1 { text-align: left;
+    color: #161D30; }
+
+#titulo1 { font-weight: 200; }
+
+h2 { font-size: 20px;
+    padding: 10px; }
+
+h3 { font-size: 15px;
+    padding: 10px; }
+
+#pendentesIcon > i {
+    color: #161D30;
+    padding-right: 5px;
+}
+
+#pendentesIcon {
+    text-decoration: none;
+    color: #161D30;
+}
+#pendentesBotao {
+    width: 150px;
+    height: 30px;
+    background:transparent;
+}
+.dark-mode h1 {
+    color: whitesmoke;
+}
+
+.turma1, .turma2, .turma3, .turma4 {
+    color: white;
+    width: 375px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px #161d307e;
+}
+
+.turma1 { background-color: #AACBEA; }
+
+.turma2 { background-color: #F3998D; }
+
+.turma3 { background-color: #FCBB90; }
+
+.turma4 { background-color: #969AB2; }
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*Ajustando sidebar com os icones*/
+@media (width < 920px){
+    #sidebar{
+        width: 72px;
+    }
+
+    #sidebar button > span{
+        width: 50px;
+        margin-left: 12.5px;
+    }
+
+    #sidebar button > span > span{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .conteudoPrincipal{
+        margin-left: 80;
+        transition: margin 0.4s;
+    }
+}
+
+.button-mobile{
+    display: none;
+    align-self: flex-start;
+    align-items: center;
+    margin: 16px;
+    background: transparent;
+    color: whitesmoke;
+    border: 0;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.menu-mobile-active{
+    width: 100vw;
+    height: 100vh;
+    background-color: #131e3b;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.menu-mobile-active button {
+    background: transparent;
+    border: 0;
+    color: whitesmoke;
+    margin-bottom: 16px;
+}
+
+.mobile-txt{
+    font-size: 24px;
+    margin-left: 8px
+
+}
+
+.button-mobile span{
+
+    font-size: 22px;
+    margin-left: 8px;
+
+}
+
+@media (max-width: 488px){
+    .sidebar{
+        display: none;
+    }
+   .button-mobile{
+    display: flex;
+    color:#131e3b;
+   }
+   .dark-mode .button-mobile{
+    display: flex;
+    color: aliceblue;
+   }
+    .conteudoPrincipal{
+        margin-left: 6px;
+    }
+}
