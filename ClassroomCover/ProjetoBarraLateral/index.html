@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Barra Lateral teste</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode" id="mode">
+        <aside class="sidebar" id="sidebar">
+            <header class="sidebar-header">
+                <img class="logo" src="sawako.jpg" alt="Meu querido"/>
+            </header>
+    
+            <nav>
+                <button>
+                    <span>
+                        <i class="material-symbols-outlined"> menu</i>
+                        <span>Menu</span>
+                    </span>
+                </button>
+                <button>
+                    <span>
+                        <i class="material-symbols-outlined"> home</i>
+                        <span>Home</span>
+                    </span>
+                </button>
+                <button>
+                    <span>
+                        <i class="material-symbols-outlined"> calendar_month</i>
+                        <span>Calendar</span>
+                    </span>
+                </button>
+                <button onclick="toggleMode()">
+                    <span>
+                        <i class="material-symbols-outlined"> dark_mode</i>
+                        <span>Mode</span>
+                    </span>
+                </button>
+                <button>
+                    <span>
+                        <i class="fa fa-github"></i>
+                        <span>GitHub</span>
+                    </span>
+                </button>
+            </nav>
+        
+        
+        </aside>
+
+        <button class="button-mobile" onclick="toggleMenu()">
+            <i class="material-symbols-outlined"> menu</i>
+            <span>Menu</span>
+            </button>
+    
+        <nav class="menu-mobile" id="menu-mobile">
+            <button onclick="toggleMenu()">
+                <span>
+                    <i class="material-symbols-outlined"> close</i>
+                </span>
+            </button>
+            <button>
+                <span>
+                    <i class="material-symbols-outlined"> home</i>
+                    <span class="mobile-txt">Home</span>
+                </span>
+            </button>
+            <button>
+                <span>
+                    <i class="material-symbols-outlined"> calendar_month</i>
+                    <span  class="mobile-txt">Calendar</span>
+                </span>
+            </button>
+            <button onclick="toggleMode()">
+                <span>
+                    <i class="material-symbols-outlined"> dark_mode</i>
+                    <span  class="mobile-txt">Mode</span>
+                </span>
+            </button>
+            <button>
+                <span>
+                    <i class="fa fa-github"></i>
+                    <span class="mobile-txt">GitHub</span>
+                </span>
+            </button>
+        </nav>
+
+    <main class="conteudoPrincipal">
+        
+        <h1 id="titulo1">Classroom</h1>
+        <button id="pendentesBotao">
+            <a href="#" id="pendentesIcon"><i class="fa fa-list"></i>Pendentes</a>
+        </button>
+    
+        <div class="grid">
+            <div class="turma1">
+                <h2>Matemática</h2>
+                <hr>
+                <h3>Prof. Maria José</h3>
+            </div>
+            
+            <div class="turma2">
+                <h2>Português</h2>
+                <hr>
+                <h3>Prof. Allana Mátar</h3>
+            </div>
+
+            <div class="turma3">
+                <h2>Tecnologia da Programação</h2>
+                <hr>
+                <h3>Prof. Virgínia Mota</h3>
+            </div>
+            
+            <div class="turma4">
+                <h2>Desenvolvimento de Aplicações para Web</h2>
+                <hr>
+                <h3>Prof. João Montandon</h3>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="conteudo.js"></script>
+</body>
+</html>
